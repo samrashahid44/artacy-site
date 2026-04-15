@@ -58,35 +58,61 @@ export default function Services() {
             We don't offer 50 different services. We offer the 5 things that actually move the needle for your business.
           </p>
         </div>
-        
-        <div className="grid grid-cols-12 gap-6">
+
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.15
+              }
+            }
+          }}
+          className="grid grid-cols-12 gap-6"
+        >
           {services.map((service, idx) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className={`${service.size} ${service.color} p-12 rounded-[2.5rem] group relative overflow-hidden flex flex-col justify-between min-h-[320px] border border-primary/5`}
+              variants={{
+                hidden: { opacity: 0, y: 50, scale: 0.95 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  transition: {
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 20
+                  }
+                }
+              }}
+              className={`${service.size} ${service.color} p-12 rounded-[2.5rem] group relative overflow-hidden flex flex-col justify-between min-h-[400px] border border-primary/5 shadow-2xl hover:shadow-accent/20 transition-all duration-500`}
             >
               <div className="relative z-10">
-                <div className={`w-14 h-14 mb-8 flex items-center justify-center rounded-2xl ${service.color.includes('primary') ? 'bg-accent text-primary' : 'bg-primary text-secondary'}`}>
-                  <service.icon size={28} />
-                </div>
-                <h3 className="text-3xl font-black mb-4 uppercase tracking-tighter">{service.title}</h3>
-                <p className="text-lg opacity-80 leading-relaxed font-medium">{service.description}</p>
+                <motion.div
+                  whileHover={{ rotate: 15, scale: 1.1 }}
+                  className={`w-20 h-20 mb-10 flex items-center justify-center rounded-[2rem] ${service.color.includes('primary') ? 'bg-accent text-primary' : 'bg-primary text-secondary'}`}
+                >
+                  <service.icon size={36} />
+                </motion.div>
+                <h3 className="text-4xl font-black mb-6 uppercase tracking-tighter leading-none">{service.title}</h3>
+                <p className="text-xl opacity-70 leading-relaxed font-medium max-w-[280px]">{service.description}</p>
               </div>
-              
+
               {/* Decorative Number */}
-              <div className="absolute bottom-8 right-12 text-6xl font-black opacity-10 select-none">
+              <div className="absolute top-12 right-12 text-8xl font-black opacity-[0.03] select-none group-hover:opacity-[0.1] transition-opacity duration-700">
                 0{idx + 1}
               </div>
 
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* Hover Grain Effect */}
+              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

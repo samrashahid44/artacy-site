@@ -18,7 +18,7 @@ export default function Footer() {
               We build brands people actually buy from. Real growth, no fluff, just math.
             </p>
           </div>
-          
+
           <div className="space-y-6">
             <p className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Offices</p>
             <div className="space-y-6">
@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          
+
           <div className="space-y-6">
             <p className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Connect</p>
             <div className="space-y-3 flex flex-col">
@@ -44,11 +44,10 @@ export default function Footer() {
                 { name: "Instagram", url: "https://www.instagram.com/artacy.uae/" },
                 { name: "LinkedIn", url: "https://www.linkedin.com/company/artacy-uae/" },
                 { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61573698080937" },
-                { name: "WhatsApp", url: "https://wa.me/971567692421" }
               ].map((link) => (
-                <a 
+                <a
                   key={link.name}
-                  className="text-sm font-black uppercase tracking-tighter text-primary/60 hover:text-accent transition-colors flex items-center gap-2 group" 
+                  className="text-sm font-black uppercase tracking-tighter text-primary/60 hover:text-accent transition-colors flex items-center gap-2 group"
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -59,7 +58,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          
+
           <div className="space-y-6">
             <p className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Legal</p>
             <div className="space-y-4">

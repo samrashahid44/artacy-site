@@ -1,19 +1,33 @@
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 export default function About() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -180]);
+
   return (
-    <section id="about" className="py-40 px-6 lg:px-12 bg-primary text-secondary overflow-hidden relative">
+    <section ref={containerRef} id="about" className="py-40 px-6 lg:px-12 bg-primary text-secondary overflow-hidden relative">
       {/* Background Decorative Element */}
-      <div className="absolute -right-20 top-0 text-[400px] font-black text-secondary/[0.02] leading-none select-none pointer-events-none">
+      <motion.div
+        style={{ y: y1 }}
+        className="absolute -right-20 top-0 text-[400px] font-black text-secondary/[0.02] leading-none select-none pointer-events-none"
+      >
         &
-      </div>
+      </motion.div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
-          
+
           {/* Left: Founders Grid */}
           <div className="lg:col-span-6 grid grid-cols-2 gap-8">
-            <motion.div 
+            <motion.div
+              style={{ y: y1 }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -22,9 +36,9 @@ export default function About() {
               <div className="relative group">
                 <div className="absolute -inset-2 bg-accent/20 rounded-[3rem] blur-2xl group-hover:bg-accent/40 transition-all duration-500" />
                 <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-secondary/10">
-                  <img 
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                    src="/humaira.jpeg" 
+                  <img
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    src="/humaira.jpeg"
                     alt="Humaira Junaid"
                   />
                 </div>
@@ -37,8 +51,9 @@ export default function About() {
                 <p className="text-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">Owner & Founder</p>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
+              style={{ y: y2 }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -48,9 +63,9 @@ export default function About() {
               <div className="relative group">
                 <div className="absolute -inset-2 bg-accent/20 rounded-[3rem] blur-2xl group-hover:bg-accent/40 transition-all duration-500" />
                 <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-secondary/10">
-                  <img 
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                    src="/samra.jpeg" 
+                  <img
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    src="/samra.jpeg"
                     alt="Samra Fawad"
                   />
                 </div>
@@ -66,7 +81,7 @@ export default function About() {
           </div>
 
           {/* Right: Copy */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -76,7 +91,7 @@ export default function About() {
               <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">We’re not a factory</span>
               <h2 className="text-6xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase">
                 Personalized <br />
-                <span className="outline-text">attention</span> <br />
+                <span className="outline-text text-secondary">attention</span> <br />
                 to detail.
               </h2>
             </div>
@@ -92,8 +107,6 @@ export default function About() {
                 Together, we’ve spent a decade decoding the nuances of the UAE and Pakistani markets. We don't do fluff, we don't do "awareness" campaigns that lead nowhere, and we never waste a cent of your budget. We’re here to make your business grow, period.
               </p>
             </div>
-
-
           </motion.div>
         </div>
       </div>

@@ -7,6 +7,10 @@ import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudy from "./pages/CaseStudy";
+import FloatingWidget from "./components/FloatingWidget";
+import CustomCursor from "./components/CustomCursor";
+import ExitIntentModal from "./components/ExitIntentModal";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function App() {
   const [route, setRoute] = useState(window.location.hash);
@@ -17,14 +21,26 @@ export default function App() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
-  if (route.startsWith("#/case-studies/")) {
-    const id = route.split("/")[2];
-    return <CaseStudy id={id} />;
-  }
+  const renderCurrentRoute = () => {
+    if (route.startsWith("#/case-studies/")) {
+      const id = route.split("/")[2];
+      return <CaseStudy id={id} />;
+    }
 
-  if (route === "#/case-studies") {
-    return <CaseStudies />;
-  }
+    if (route === "#/case-studies") {
+      return <CaseStudies />;
+    }
 
-  return <Home />;
+    return <Home />;
+  };
+
+  return (
+    <>
+      <ScrollProgress />
+      <CustomCursor />
+      {renderCurrentRoute()}
+      <FloatingWidget />
+      <ExitIntentModal />
+    </>
+  );
 }
