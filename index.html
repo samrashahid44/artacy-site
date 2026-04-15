@@ -34,6 +34,31 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Artacy Digital",
+      "image": "https://artacy.net/logo.png",
+      "@id": "https://artacy.net",
+      "url": "https://artacy.net",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Lahore",
+          "addressCountry": "PK"
+        }
+      ],
+      "description": "Premium digital agency in Dubai and Pakistan building brands through data-driven strategy and ads."
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
