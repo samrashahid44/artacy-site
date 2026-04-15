@@ -5,9 +5,9 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-headline: "Space Grotesk", sans-serif;
   
-  --color-primary: #0A0A0A;
+  --color-primary: #0D1117; /* Midnight Obsidian */
   --color-secondary: #F5F5F0;
-  --color-accent: #614051; /* Plum */
+  --color-accent: #8B6A7B; /* Soft Rose-Plum */
   --color-surface: #FFFFFF;
   --color-muted: #71717A;
 }

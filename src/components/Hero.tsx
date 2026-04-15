@@ -84,9 +84,9 @@ export default function Hero() {
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <div className="relative z-10 perspective-1000">
-              <div className="curator-notch bg-[#1a1216]/50 backdrop-blur-sm flex items-center justify-center overflow-hidden aspect-[4/5] shadow-[40px_40px_0px_0px_rgba(97,64,81,1)] border border-primary/10 rotate-y-12 relative group">
+            <div className="curator-notch bg-primary/20 backdrop-blur-sm flex items-center justify-center overflow-hidden aspect-[4/5] shadow-[40px_40px_0px_0px_rgba(139,106,123,0.3)] border border-primary/10 rotate-y-12 relative group">
                 {/* Grid Background */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(247,243,235,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(247,243,235,0.03)_1px,transparent_1px)] bg-[size:20px_20px]" />
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(139,106,123,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(139,106,123,0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
 
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
@@ -98,7 +98,7 @@ export default function Hero() {
                     animate={{ y: [0, -20, 0], scale: [1, 1.02, 1] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    <TrendingUp className="w-48 h-48 drop-shadow-[0_0_30px_rgba(209,249,113,0.4)] md:w-64 md:h-64" strokeWidth={1} />
+                    <TrendingUp className="w-48 h-48 drop-shadow-[0_0_30px_rgba(139,106,123,0.4)] md:w-64 md:h-64" strokeWidth={1} />
                   </motion.div>
                 </motion.div>
               </div>

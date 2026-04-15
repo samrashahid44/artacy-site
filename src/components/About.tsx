@@ -12,11 +12,11 @@ export default function About() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -180]);
 
   return (
-    <section ref={containerRef} id="about" className="py-40 px-6 lg:px-12 bg-primary text-secondary overflow-hidden relative">
+    <section ref={containerRef} id="about" className="py-40 px-6 lg:px-12 bg-secondary text-primary overflow-hidden relative">
       {/* Background Decorative Element */}
       <motion.div
         style={{ y: y1 }}
-        className="absolute -right-20 top-0 text-[400px] font-black text-secondary/[0.02] leading-none select-none pointer-events-none"
+        className="absolute -right-20 top-0 text-[400px] font-black text-primary/[0.03] leading-none select-none pointer-events-none"
       >
         &
       </motion.div>
@@ -34,8 +34,8 @@ export default function About() {
               className="space-y-6"
             >
               <div className="relative group">
-                <div className="absolute -inset-2 bg-accent/20 rounded-[3rem] blur-2xl group-hover:bg-accent/40 transition-all duration-500" />
-                <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-secondary/10">
+                <div className="absolute -inset-2 bg-accent/10 rounded-[3rem] blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
+                <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-primary/5">
                   <img
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                     src="/humaira.jpeg"
@@ -61,8 +61,8 @@ export default function About() {
               className="space-y-6 mt-24"
             >
               <div className="relative group">
-                <div className="absolute -inset-2 bg-accent/20 rounded-[3rem] blur-2xl group-hover:bg-accent/40 transition-all duration-500" />
-                <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-secondary/10">
+                <div className="absolute -inset-2 bg-accent/10 rounded-[3rem] blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
+                <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-primary/5">
                   <img
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                     src="/samra.jpeg"
@@ -91,12 +91,12 @@ export default function About() {
               <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">We’re not a factory</span>
               <h2 className="text-6xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase">
                 Personalized <br />
-                <span className="outline-text text-secondary">attention</span> <br />
+                <span className="outline-text text-primary">attention</span> <br />
                 to detail.
               </h2>
             </div>
 
-            <div className="space-y-8 text-secondary/70 text-lg leading-relaxed font-medium max-w-xl">
+            <div className="space-y-8 text-primary/70 text-lg leading-relaxed font-medium max-w-xl">
               <p>
                 We aren't just another agency; we are your one-stop solution and dedicated partners in digital success. As a lean, agile team, we offer the personalized attention your brand deserves, focusing on what truly matters: your P&L.
               </p>
