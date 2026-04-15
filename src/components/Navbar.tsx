@@ -3,16 +3,13 @@ import { motion } from "motion/react";
 export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav">
-      <div className="flex justify-between items-center w-full px-6 lg:px-12 py-6 max-w-[1600px] mx-auto">
+      <div className="flex justify-between items-center w-full px-6 lg:px-12 py-2 max-w-[1600px] mx-auto">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-4"
+          className="flex items-center"
         >
-          <img src="/logo.png" alt="Artacy Logo" className="w-20 h-20 object-contain" />
-          <span className="text-3xl font-black tracking-tighter text-primary uppercase font-headline">
-            Artacy
-          </span>
+          <img src="/logo.png" alt="Artacy Logo" className="h-32 w-auto object-contain" />
         </motion.div>
         
         <div className="hidden md:flex items-center gap-x-12">

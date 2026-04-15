@@ -10,12 +10,9 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-          <div className="space-y-8">
-            <div className="flex items-center gap-4">
-              <img src="/logo.png" alt="Artacy Logo" className="w-16 h-16 object-contain" />
-              <span className="text-3xl font-black tracking-tighter text-primary uppercase font-headline">
-                Artacy
-              </span>
+          <div className="space-y-4">
+            <div className="flex items-center -ml-4">
+              <img src="/logo.png" alt="Artacy Logo" className="h-24 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed text-primary/60 max-w-xs font-medium">
               We build brands people actually buy from. Real growth, no fluff, just math.
@@ -24,14 +21,20 @@ export default function Footer() {
           
           <div className="space-y-6">
             <p className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Offices</p>
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
                 <p className="text-sm font-black uppercase tracking-tighter">UAE</p>
                 <p className="text-xs text-primary/60 mt-1">Dubai Design District, D3</p>
+                <a href="tel:+971567692421" className="text-xs text-accent font-bold mt-2 block hover:underline transition-all">
+                  +971 56 769 2421
+                </a>
               </div>
               <div>
                 <p className="text-sm font-black uppercase tracking-tighter">Pakistan</p>
                 <p className="text-xs text-primary/60 mt-1">DHA Phase 6, Karachi</p>
+                <a href="tel:+923703364720" className="text-xs text-accent font-bold mt-2 block hover:underline transition-all">
+                  +92 370 3364720
+                </a>
               </div>
             </div>
           </div>
@@ -39,14 +42,21 @@ export default function Footer() {
           <div className="space-y-6">
             <p className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Connect</p>
             <div className="space-y-3 flex flex-col">
-              {["Instagram", "LinkedIn", "Twitter", "WhatsApp"].map((link) => (
+              {[
+                { name: "Instagram", url: "https://www.instagram.com/artacy.uae/" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/company/artacy-uae/" },
+                { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61573698080937" },
+                { name: "WhatsApp", url: "https://wa.me/971567692421" }
+              ].map((link) => (
                 <a 
-                  key={link}
+                  key={link.name}
                   className="text-sm font-black uppercase tracking-tighter text-primary/60 hover:text-accent transition-colors flex items-center gap-2 group" 
-                  href="#"
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span className="w-0 h-[1px] bg-accent group-hover:w-4 transition-all" />
-                  {link}
+                  {link.name}
                 </a>
               ))}
             </div>
@@ -55,8 +65,8 @@ export default function Footer() {
           <div className="space-y-6">
             <p className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Legal</p>
             <div className="space-y-4">
-              <a className="text-sm font-black uppercase tracking-tighter text-primary/60 hover:text-accent transition-colors block" href="mailto:hello@artacy.agency">
-                hello@artacy.agency
+              <a className="text-sm font-black uppercase tracking-tighter text-primary/60 hover:text-accent transition-colors block" href="mailto:artacy.net@gmail.com">
+                artacy.net@gmail.com
               </a>
               <p className="text-[10px] text-primary/40 font-bold uppercase tracking-widest mt-12">
                 © 2024 Artacy Digital. <br />

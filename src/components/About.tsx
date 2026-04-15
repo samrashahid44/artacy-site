@@ -93,16 +93,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="pt-8 grid grid-cols-2 gap-8 border-t border-secondary/10">
-              <div>
-                <p className="text-accent font-black text-4xl">10+</p>
-                <p className="text-[10px] uppercase tracking-widest font-bold mt-2 opacity-50">Years Experience</p>
-              </div>
-              <div>
-                <p className="text-accent font-black text-4xl">100+</p>
-                <p className="text-[10px] uppercase tracking-widest font-bold mt-2 opacity-50">Satisfied Clients</p>
-              </div>
-            </div>
+
           </motion.div>
         </div>
       </div>
