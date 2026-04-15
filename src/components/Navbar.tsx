@@ -7,12 +7,10 @@ export default function Navbar() {
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2"
+          className="flex items-center gap-4"
         >
-          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <div className="w-3 h-3 bg-accent rounded-full" />
-          </div>
-          <span className="text-2xl font-black tracking-tighter text-primary uppercase font-headline">
+          <img src="/logo.png" alt="Artacy Logo" className="w-20 h-20 object-contain" />
+          <span className="text-3xl font-black tracking-tighter text-primary uppercase font-headline">
             Artacy
           </span>
         </motion.div>

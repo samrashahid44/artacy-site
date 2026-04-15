@@ -9,6 +9,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Advantage from "./components/Advantage";
 import Portfolio from "./components/Portfolio";
+import Testimonials from "./components/Testimonials";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
@@ -23,6 +24,7 @@ export default function App() {
         <Services />
         <Advantage />
         <Portfolio />
+        <Testimonials />
         <CTA />
       </main>
       <Footer />

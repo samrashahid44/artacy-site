@@ -11,11 +11,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           <div className="space-y-8">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                <div className="w-2 h-2 bg-accent rounded-full" />
-              </div>
-              <span className="text-2xl font-black tracking-tighter text-primary uppercase font-headline">
+            <div className="flex items-center gap-4">
+              <img src="/logo.png" alt="Artacy Logo" className="w-16 h-16 object-contain" />
+              <span className="text-3xl font-black tracking-tighter text-primary uppercase font-headline">
                 Artacy
               </span>
             </div>

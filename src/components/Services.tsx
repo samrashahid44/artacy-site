@@ -48,7 +48,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
-            <span className="text-primary/40 font-bold uppercase tracking-[0.4em] text-[10px]">How we get you paid</span>
+            <span className="text-primary/40 font-bold uppercase tracking-[0.4em] text-[10px]">Our Roadmap to Success</span>
             <h2 className="text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-none">
               Our <br />
               <span className="outline-text">Playbook</span>
