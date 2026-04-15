@@ -22,7 +22,7 @@ export default function Portfolio() {
             className="space-y-4"
           >
             <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">Selected Works</span>
-            <h2 className="text-6xl lg:text-8xl font-black tracking-tighter uppercase leading-none text-secondary">
+            <h2 className="text-secondary">
               The <span className="outline-text">Proof</span>
             </h2>
           </motion.div>
@@ -32,7 +32,7 @@ export default function Portfolio() {
           {caseStudies.map((study, idx) => (
             <motion.div
               key={study.id}
-              className="group relative h-[60vh] w-[80vw] md:w-[600px] shrink-0"
+              className="group relative h-[50vh] md:h-[60vh] w-[85vw] md:w-[600px] shrink-0"
             >
               <a href={`#/case-studies/${study.id}`} className="block h-full w-full">
                 <div className="relative h-full w-full overflow-hidden rounded-[3rem] border border-secondary/10">
@@ -44,10 +44,10 @@ export default function Portfolio() {
                   />
 
                   {/* Overlay Info */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-12 flex flex-col justify-end">
-                    <span className="text-accent font-bold uppercase tracking-widest text-xs mb-4">{study.category}</span>
-                    <h4 className="text-4xl font-black text-secondary uppercase tracking-tighter mb-4">{study.title}</h4>
-                    <p className="text-secondary/60 text-sm max-w-xs font-medium line-clamp-2">{study.overview}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 md:p-12 flex flex-col justify-end">
+                    <span className="text-accent font-bold uppercase tracking-widest text-[8px] md:text-xs mb-2 md:mb-4">{study.category}</span>
+                    <h4 className="text-2xl md:text-4xl font-black text-secondary uppercase tracking-tighter mb-2 md:mb-4">{study.title}</h4>
+                    <p className="text-secondary/60 text-xs md:text-sm max-w-xs font-medium line-clamp-2">{study.overview}</p>
                   </div>
 
                   <div className="absolute top-8 right-8">
@@ -61,7 +61,7 @@ export default function Portfolio() {
           ))}
 
           {/* Last Card: Call to Action */}
-          <motion.div className="h-[60vh] w-[80vw] md:w-[600px] shrink-0 flex items-center justify-center">
+          <motion.div className="h-[50vh] md:h-[60vh] w-[85vw] md:w-[600px] shrink-0 flex items-center justify-center">
             <a href="#/case-studies" className="group text-center space-y-8">
               <h3 className="text-5xl lg:text-7xl font-black uppercase tracking-tighter text-secondary leading-none">
                 See <br /> All <span className="text-accent">Results</span>

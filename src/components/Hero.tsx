@@ -8,13 +8,13 @@ export default function Hero() {
   const yImage = useTransform(scrollY, [0, 800], [0, -100]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden px-6 lg:px-12 pt-20 bg-secondary">
+    <section className="relative min-h-screen flex items-center overflow-hidden px-6 lg:px-12 pt-32 md:pt-20 bg-secondary">
       {/* Background Decorative Text */}
       <motion.div
         style={{ y: yText, opacity: opacityText }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-0"
       >
-        <h2 className="text-[25vw] font-black outline-text opacity-[0.03] leading-none uppercase">
+        <h2 className="text-[25vw] md:text-[20vw] font-black outline-text opacity-[0.03] leading-none uppercase">
           Artacy
         </h2>
       </motion.div>
@@ -37,7 +37,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-7xl md:text-[120px] font-black tracking-tighter leading-[0.85] text-primary uppercase mt-10 mb-10">
+            <h1 className="font-black text-primary uppercase mt-10 mb-10">
               We build <br />
               <span className="text-accent bg-primary px-4 inline-block -rotate-1 text-secondary">brands</span> <br />
               people buy.
@@ -109,10 +109,10 @@ export default function Hero() {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="absolute -bottom-12 -left-12 bg-primary p-10 rounded-2xl shadow-2xl max-w-[240px] z-20"
+              className="absolute -bottom-6 -left-6 md:-bottom-12 md:-left-12 bg-primary p-6 md:p-10 rounded-2xl shadow-2xl max-w-[180px] md:max-w-[240px] z-20"
             >
-              <div className="text-accent font-black text-6xl leading-none">100%</div>
-              <p className="text-secondary/60 text-[10px] uppercase tracking-widest mt-4 leading-relaxed font-bold">
+              <div className="text-accent font-black text-4xl md:text-6xl leading-none">100%</div>
+              <p className="text-secondary/60 text-[8px] md:text-[10px] uppercase tracking-widest mt-4 leading-relaxed font-bold">
                 Client retention. No guessing, just results.
               </p>
             </motion.div>

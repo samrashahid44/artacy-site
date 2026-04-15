@@ -52,7 +52,7 @@ export default function FloatingWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="fixed bottom-28 right-6 z-50 w-80 bg-primary border border-secondary/10 rounded-3xl shadow-2xl overflow-hidden glass-nav"
+            className="fixed bottom-28 right-6 z-50 w-[calc(100vw-3rem)] max-w-80 bg-primary border border-secondary/10 rounded-3xl shadow-2xl overflow-hidden glass-nav"
           >
             <div className="p-6 bg-secondary text-primary">
               <h3 className="font-black uppercase tracking-tighter text-xl">Let's scale.</h3>

@@ -56,17 +56,17 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="results" className="py-40 bg-primary text-secondary overflow-hidden">
+    <section id="results" className="py-5 md:py-40 bg-primary text-secondary overflow-hidden">
       <div className="px-6 lg:px-12 mb-24 max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-end gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-8 text-center lg:text-left">
           <div className="space-y-4">
             <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">What they say</span>
-            <h2 className="text-7xl lg:text-9xl font-black tracking-tighter uppercase leading-none">
+            <h2 className="">
               Client <br />
               <span className="outline-text text-secondary">Love</span>
             </h2>
           </div>
-          <p className="text-secondary/40 max-w-xs font-medium leading-relaxed mb-4">
+          <p className="text-secondary/40 max-w-xs font-medium leading-relaxed mb-4 mx-auto lg:mx-0">
             Real feedback from businesses building their empires with Artacy. No stage-managed PR, just real partnership.
           </p>
         </div>
@@ -78,13 +78,13 @@ export default function Testimonials() {
           {/* Row 1 */}
           <div className="flex gap-6 animate-marquee whitespace-nowrap">
             {[...testimonials, ...testimonials].map((t, i) => (
-              <div 
-                key={i} 
-                className="inline-block w-[400px] bg-secondary/5 border border-secondary/10 p-10 rounded-[2.5rem] whitespace-normal flex flex-col justify-between shrink-0"
+              <div
+                key={i}
+                className="inline-block w-[300px] md:w-[400px] bg-secondary/5 border border-secondary/10 p-8 md:p-10 rounded-[2.5rem] whitespace-normal flex flex-col justify-between shrink-0"
               >
                 <div className="space-y-6">
                   <Quote className="text-accent w-8 h-8 opacity-50" />
-                  <p className="text-xl font-medium leading-relaxed italic opacity-90">
+                  <p className="text-lg md:text-xl font-medium leading-relaxed italic opacity-90">
                     "{t.quote}"
                   </p>
                 </div>
@@ -100,16 +100,16 @@ export default function Testimonials() {
 
       {/* Decorative Branding Line */}
       <div className="mt-32 border-y border-secondary/5 py-12 overflow-hidden bg-accent/5">
-         <div className="flex gap-20 animate-marquee-slow whitespace-nowrap items-center">
-            {Array(10).fill(0).map((_, i) => (
-               <div key={i} className="flex gap-20 items-center">
-                  <span className="text-4xl font-black uppercase tracking-tighter opacity-10">Real Growth</span>
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="text-4xl font-black uppercase tracking-tighter opacity-10">Artacy Digital</span>
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-               </div>
-            ))}
-         </div>
+        <div className="flex gap-20 animate-marquee-slow whitespace-nowrap items-center">
+          {Array(10).fill(0).map((_, i) => (
+            <div key={i} className="flex gap-20 items-center">
+              <span className="text-4xl font-black uppercase tracking-tighter opacity-10">Real Growth</span>
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <span className="text-4xl font-black uppercase tracking-tighter opacity-10">Artacy Digital</span>
+              <div className="w-2 h-2 rounded-full bg-accent" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -17,7 +17,7 @@ export default function CaseStudy({ id }: { id?: string }) {
   }
 
   return (
-    <div className="min-h-screen relative bg-primary text-secondary">
+    <div className="min-h-screen relative bg-primary text-secondary overflow-x-hidden">
       <div className="grain-overlay" />
       <Navbar />
 
@@ -37,7 +37,7 @@ export default function CaseStudy({ id }: { id?: string }) {
             </span>
           </div>
 
-          <h1 className="text-5xl lg:text-7xl font-black tracking-tighter uppercase leading-none mb-8">
+          <h1 className="mb-8">
             {study.title}
           </h1>
         </header>
@@ -57,7 +57,7 @@ export default function CaseStudy({ id }: { id?: string }) {
               const trimmed = paragraph.trim();
               if (trimmed.startsWith('##')) {
                 return (
-                  <h2 key={index} className="text-3xl md:text-4xl font-black uppercase tracking-tighter mt-16 mb-6 text-secondary first:mt-0">
+                  <h2 key={index} className="font-black uppercase tracking-tighter mt-12 mb-6 text-secondary first:mt-0">
                     {trimmed.replace(/^##\s*/, '')}
                   </h2>
                 );
@@ -71,7 +71,7 @@ export default function CaseStudy({ id }: { id?: string }) {
             })}
           </article>
 
-          <aside className="sticky top-32 space-y-8 bg-secondary/5 rounded-3xl p-8 border border-secondary/10">
+          <aside className="md:sticky md:top-32 space-y-8 bg-secondary/5 rounded-3xl p-8 border border-secondary/10 mt-12 md:mt-0">
             <div>
               <h3 className="text-accent text-xs font-bold uppercase tracking-widest mb-3">Overview</h3>
               <p className="text-sm text-secondary/80 leading-relaxed">{study.overview}</p>

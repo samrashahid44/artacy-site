@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <footer className="bg-secondary w-full py-24 px-6 lg:px-12 relative overflow-hidden">
       {/* Background Decorative Text */}
-      <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 pointer-events-none select-none">
-        <h2 className="text-[30vw] font-black text-primary/[0.02] leading-none uppercase">
+      <div className="absolute -bottom-10 md:-bottom-20 left-1/2 -translate-x-1/2 pointer-events-none select-none">
+        <h2 className="text-[30vw] md:text-[25vw] font-black text-primary/[0.02] leading-none uppercase">
           Artacy
         </h2>
       </div>
@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           <div className="space-y-4">
             <div className="flex items-center -ml-4">
-              <img src="/logo.png" alt="Artacy Logo" className="h-24 w-auto object-contain" />
+              <img src="/logo.png" alt="Artacy Logo" className="h-16 md:h-24 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed text-primary/60 max-w-xs font-medium">
               We build brands people actually buy from. Real growth, no fluff, just math.

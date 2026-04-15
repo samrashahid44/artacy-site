@@ -12,11 +12,11 @@ export default function About() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -180]);
 
   return (
-    <section ref={containerRef} id="about" className="py-40 px-6 lg:px-12 bg-secondary text-primary overflow-hidden relative">
+    <section ref={containerRef} id="about" className="py-20 md:py-40 px-6 lg:px-12 bg-secondary text-primary overflow-hidden relative">
       {/* Background Decorative Element */}
       <motion.div
         style={{ y: y1 }}
-        className="absolute -right-20 top-0 text-[400px] font-black text-primary/[0.03] leading-none select-none pointer-events-none"
+        className="absolute -right-20 top-0 text-[150px] md:text-[400px] font-black text-primary/[0.03] leading-none select-none pointer-events-none"
       >
         &
       </motion.div>
@@ -25,7 +25,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
 
           {/* Left: Founders Grid */}
-          <div className="lg:col-span-6 grid grid-cols-2 gap-8">
+          <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               style={{ y: y1 }}
               initial={{ opacity: 0, y: 50 }}
@@ -58,7 +58,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="space-y-6 mt-24"
+              className="space-y-6 md:mt-24"
             >
               <div className="relative group">
                 <div className="absolute -inset-2 bg-accent/10 rounded-[3rem] blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
@@ -87,16 +87,16 @@ export default function About() {
             viewport={{ once: true }}
             className="lg:col-span-6 lg:sticky lg:top-40 space-y-12"
           >
-            <div className="space-y-4">
+            <div className="space-y-4 text-center lg:text-left">
               <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">We’re not a factory</span>
-              <h2 className="text-6xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase">
+              <h2 className="">
                 Personalized <br />
                 <span className="outline-text text-primary">attention</span> <br />
                 to detail.
               </h2>
             </div>
 
-            <div className="space-y-8 text-primary/70 text-lg leading-relaxed font-medium max-w-xl">
+            <div className="space-y-8 text-primary/70 text-lg leading-relaxed font-medium max-w-xl text-center lg:text-left mx-auto lg:mx-0">
               <p>
                 We aren't just another agency; we are your one-stop solution and dedicated partners in digital success. As a lean, agile team, we offer the personalized attention your brand deserves, focusing on what truly matters: your P&L.
               </p>

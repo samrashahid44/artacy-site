@@ -41,20 +41,20 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-40 px-6 lg:px-12 bg-secondary relative overflow-hidden">
+    <section id="services" className="py-20 md:py-40 px-6 lg:px-12 bg-secondary relative overflow-hidden">
       {/* Decorative Grid */}
       <div className="absolute inset-0 bg-quill-gradient opacity-50 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8 text-center lg:text-left items-center lg:items-end">
           <div className="space-y-4">
             <span className="text-primary/40 font-bold uppercase tracking-[0.4em] text-[10px]">Our Roadmap to Success</span>
-            <h2 className="text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-none">
+            <h2 className="">
               Our <br />
               <span className="outline-text">Playbook</span>
             </h2>
           </div>
-          <p className="text-primary/60 max-w-sm font-medium leading-relaxed">
+          <p className="text-primary/60 max-w-sm font-medium leading-relaxed mx-auto lg:mx-0">
             We don't offer 50 different services. We offer the 5 things that actually move the needle for your business.
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function Services() {
                   }
                 }
               }}
-              className={`${service.size} ${service.color} p-12 rounded-[2.5rem] group relative overflow-hidden flex flex-col justify-between min-h-[400px] border border-primary/5 shadow-2xl hover:shadow-accent/20 transition-all duration-500`}
+              className={`${service.size} ${service.color} p-8 md:p-12 rounded-[2.5rem] group relative overflow-hidden flex flex-col justify-between min-h-[350px] md:min-h-[400px] border border-primary/5 shadow-2xl hover:shadow-accent/20 transition-all duration-500`}
             >
               <div className="relative z-10">
                 <motion.div

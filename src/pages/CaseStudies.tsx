@@ -7,21 +7,21 @@ import { caseStudies } from "../data/caseStudiesData";
 
 export default function CaseStudies() {
   return (
-    <div className="min-h-screen relative bg-primary text-secondary">
+    <div className="min-h-screen relative bg-primary text-secondary overflow-x-hidden">
       <div className="grain-overlay" />
       <Navbar />
       <main className="pt-40 pb-20 px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="mb-20">
+        <div className="mb-20 text-center lg:text-left">
           <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">Our Work</span>
-          <h1 className="text-6xl lg:text-8xl font-black tracking-tighter uppercase leading-none mt-4">
+          <h1 className="">
             Case <span className="outline-text">Studies</span>
           </h1>
-          <p className="max-w-xl text-secondary/60 mt-8">
+          <p className="max-w-xl text-secondary/60 mt-8 mx-auto lg:mx-0">
             Explore our detailed case studies showcasing how we have transformed businesses, generated leads, and built authoritative brands across various industries.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {caseStudies.map((study, idx) => (
             <motion.div
               key={study.id}

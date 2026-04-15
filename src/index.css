@@ -10,6 +10,11 @@
   --color-accent: #8B6A7B; /* Soft Rose-Plum */
   --color-surface: #FFFFFF;
   --color-muted: #71717A;
+
+  /* Fluid Typography - scaled from 375px to 1440px */
+  --text-fluid-h1: clamp(3rem, 10vw + 1rem, 7.5rem);
+  --text-fluid-h2: clamp(2.5rem, 8vw + 1rem, 5.5rem);
+  --text-fluid-h3: clamp(2rem, 5vw + 1rem, 3.5rem);
 }
 
 @layer base {
@@ -18,7 +23,22 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4 {
+  h1 {
+    @apply font-headline font-bold tracking-tighter leading-[0.85] uppercase;
+    font-size: var(--text-fluid-h1);
+  }
+
+  h2 {
+    @apply font-headline font-bold tracking-tighter leading-[0.9] uppercase;
+    font-size: var(--text-fluid-h2);
+  }
+
+  h3 {
+    @apply font-headline font-bold tracking-tighter leading-none uppercase;
+    font-size: var(--text-fluid-h3);
+  }
+
+  h4 {
     @apply font-headline font-bold tracking-tight;
   }
 }

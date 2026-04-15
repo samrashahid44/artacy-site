@@ -40,7 +40,7 @@ export default function App() {
       <CustomCursor />
       {renderCurrentRoute()}
       <FloatingWidget />
-      <ExitIntentModal />
+      {/* <ExitIntentModal /> */}
     </>
   );
 }
