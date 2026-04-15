@@ -7,7 +7,7 @@ const services = [
     description: "Data-driven marketing roadmaps that align every channel to one goal — revenue growth.",
     deliverables: ["Market & competitor analysis", "90-day growth roadmap", "KPI frameworks & reporting"],
     icon: Target,
-    size: "col-span-12 md:col-span-6 lg:col-span-8",
+    size: "col-span-12 md:col-span-6 lg:col-span-4",
     color: "bg-primary text-secondary",
     iconBg: "bg-accent text-primary",
   },
@@ -109,7 +109,7 @@ export default function Services() {
                   }
                 }
               }}
-              className={`${service.size} ${service.color} p-8 md:p-10 rounded-[2rem] group relative overflow-hidden flex flex-col justify-between min-h-[340px] md:min-h-[380px] border border-primary/5 shadow-xl hover:shadow-accent/20 transition-all duration-500 hover:-translate-y-1`}
+              className={`${service.size} ${service.color} p-8 md:p-10 rounded-[2rem] group relative overflow-hidden flex flex-col justify-between min-h-[420px] border border-primary/5 shadow-xl hover:shadow-accent/20 transition-all duration-500 hover:-translate-y-1`}
             >
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-8">
