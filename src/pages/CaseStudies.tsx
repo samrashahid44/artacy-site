@@ -33,7 +33,7 @@ export default function CaseStudies() {
               <a href={`#/case-studies/${study.id}`} className="block">
                 <div className="relative overflow-hidden rounded-[2.5rem] aspect-[4/3] border border-secondary/10">
                   <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-0 md:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     src={study.image}
                     alt={study.title}
                     referrerPolicy="no-referrer"

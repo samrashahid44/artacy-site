@@ -37,7 +37,7 @@ export default function Portfolio() {
               <a href={`#/case-studies/${study.id}`} className="block h-full w-full">
                 <div className="relative h-full w-full overflow-hidden rounded-[3rem] border border-secondary/10">
                   <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-0 md:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     src={study.image}
                     alt={study.title}
                     referrerPolicy="no-referrer"

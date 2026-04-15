@@ -37,7 +37,7 @@ export default function About() {
                 <div className="absolute -inset-2 bg-accent/10 rounded-[3rem] blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
                 <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-primary/5">
                   <img
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700"
                     src="/humaira.jpeg"
                     alt="Humaira Junaid"
                   />
@@ -64,7 +64,7 @@ export default function About() {
                 <div className="absolute -inset-2 bg-accent/10 rounded-[3rem] blur-2xl group-hover:bg-accent/30 transition-all duration-500" />
                 <div className="relative rounded-[3rem] overflow-hidden aspect-[3/4] border border-primary/5">
                   <img
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700"
                     src="/samra.jpeg"
                     alt="Samra Fawad"
                   />
