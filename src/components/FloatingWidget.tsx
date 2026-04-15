@@ -73,7 +73,7 @@ export default function FloatingWidget() {
               </a>
               <a 
                 href="mailto:contact@artacy.net"
-                className="w-full border border-secondary/20 text-secondary px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center justify-center hover:bg-secondary/10 transition-colors"
+                className="w-full border border-primary/10 text-primary px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center justify-center hover:bg-primary/5 transition-colors"
               >
                 Email us instead
               </a>
