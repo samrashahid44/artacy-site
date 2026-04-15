@@ -1,0 +1,16 @@
+{
+  "short_name": "Artacy",
+  "name": "Artacy Digital",
+  "description": "Premium digital agency in Dubai and Pakistan. We build brands people buy. Real Growth. No Fluff.",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0D1117",
+  "background_color": "#F5F5F0"
+}
