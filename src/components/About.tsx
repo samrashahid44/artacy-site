@@ -48,7 +48,7 @@ export default function About() {
               </div>
               <div>
                 <p className="font-black text-2xl uppercase tracking-tighter">Humaira Junaid</p>
-                <p className="text-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">Owner & Founder</p>
+                <p className="text-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">Creative & UAE Market Expert</p>
               </div>
             </motion.div>
 
@@ -75,7 +75,7 @@ export default function About() {
               </div>
               <div>
                 <p className="font-black text-2xl uppercase tracking-tighter">Samra Fawad</p>
-                <p className="text-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">CEO & Founder</p>
+                <p className="text-accent text-[10px] uppercase tracking-[0.3em] font-bold mt-1">Strategy & Data Lead</p>
               </div>
             </motion.div>
           </div>
@@ -98,13 +98,16 @@ export default function About() {
 
             <div className="space-y-8 text-primary/70 text-lg leading-relaxed font-medium max-w-xl text-center lg:text-left mx-auto lg:mx-0">
               <p>
-                We aren't just another agency; we are your one-stop solution and dedicated partners in digital success. As a lean, agile team, we offer the personalized attention your brand deserves, focusing on what truly matters: your P&L.
+                We aren't just another agency; we are your one-stop solution and dedicated partners in digital success. As a lean, agile team, we offer the personalized attention your brand deserves, focusing on what truly matters: <strong>your P&L.</strong>
               </p>
               <p>
-                <strong>Humaira</strong> brings deep UAE market exposure and a localized creative edge, crafting the thumb-stopping content that captures attention in a crowded feed. <strong>Samra</strong> backs that creativity with a global perspective, drawing from extensive marketing experience across the <strong>US, Canada, UK, UAE, and Pakistan</strong>. While Humaira masters the "scroll-stop," Samra masters the math—the data-driven strategies that ensure your ads actually convert.
+                <strong>Humaira</strong> brings deep UAE market exposure and a localized creative edge, crafting the thumb-stopping content that captures attention in a crowded feed. <strong>Samra</strong> backs that creativity with a global perspective, drawing from extensive marketing experience across the US, Canada, UK, UAE, and Pakistan.
               </p>
               <p>
-                Together, we’ve spent a decade decoding the nuances of the UAE and Pakistani markets. We don't do fluff, we don't do "awareness" campaigns that lead nowhere, and we never waste a cent of your budget. We’re here to make your business grow, period.
+                While Humaira masters the "scroll-stop," Samra masters the math—the data-driven strategies that ensure your ads actually convert. Together, we’ve spent a decade decoding the nuances of the UAE and Pakistani markets.
+              </p>
+              <p className="text-primary font-bold">
+                We don't do fluff, we don't do "awareness" campaigns that lead nowhere, and we never waste a cent of your budget. We’re here to make your business grow, period.
               </p>
             </div>
           </motion.div>
