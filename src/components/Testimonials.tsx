@@ -62,7 +62,7 @@ export default function Testimonials() {
           <div className="space-y-4">
             <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">What they say</span>
             <h2 className="">
-              Client <br />
+              Clients <br />
               <span className="outline-text text-secondary">Love</span>
             </h2>
           </div>

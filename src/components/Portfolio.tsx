@@ -21,9 +21,9 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="space-y-4 text-center md:text-left"
           >
-            <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">Selected Works</span>
+            <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px]">Success Stories</span>
             <h2 className="text-secondary">
-              The <span className="outline-text">Proof</span>
+              Proven Impact
             </h2>
           </motion.div>
         </div>

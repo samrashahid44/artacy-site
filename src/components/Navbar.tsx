@@ -15,8 +15,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
     { name: "Case Studies", href: "#/case-studies" },
+    { name: "About", href: "#about" },
   ];
 
   return (
@@ -86,7 +86,7 @@ export default function Navbar() {
           >
             <div className="flex justify-between items-center mb-20">
               <img src="/logo.png" alt="Artacy Logo" className="h-16 w-auto object-contain" />
-              <button 
+              <button
                 onClick={toggleMenu}
                 className="p-2 text-primary"
               >
