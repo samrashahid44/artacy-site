@@ -53,13 +53,22 @@ export default function CaseStudy() {
         </div>
 
         <div className="grid md:grid-cols-[1fr_300px] gap-12 lg:gap-24 items-start">
-          <article className="prose prose-invert prose-lg max-w-none prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tighter prose-a:text-accent prose-strong:text-accent">
-            {study.content.split('\\n').map((paragraph, index) => {
-              if (paragraph.startsWith('## ')) {
-                return <h2 key={index} className="text-3xl mt-12 mb-6">{paragraph.replace('## ', '')}</h2>;
+          <article className="max-w-none">
+            {study.content.split('\n').map((paragraph, index) => {
+              const trimmed = paragraph.trim();
+              if (trimmed.startsWith('##')) {
+                return (
+                  <h2 key={index} className="text-3xl md:text-4xl font-black uppercase tracking-tighter mt-16 mb-6 text-secondary first:mt-0">
+                    {trimmed.replace(/^##\s*/, '')}
+                  </h2>
+                );
               }
-              if (paragraph.trim() === '') return null;
-              return <p key={index} className="text-secondary/80 leading-relaxed mb-6">{paragraph}</p>;
+              if (trimmed === '') return null;
+              return (
+                <p key={index} className="text-lg md:text-xl text-secondary/70 leading-relaxed mb-8 font-light">
+                  {trimmed}
+                </p>
+              );
             })}
           </article>
 
