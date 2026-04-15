@@ -1,18 +1,17 @@
-import { useParams, Link } from "react-router-dom";
+
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { caseStudies } from "../data/caseStudiesData";
 
-export default function CaseStudy() {
-  const { id } = useParams<{ id: string }>();
+export default function CaseStudy({ id }: { id?: string }) {
   const study = caseStudies.find(s => s.id === id);
 
   if (!study) {
     return (
       <div className="min-h-screen relative bg-primary text-secondary flex flex-col items-center justify-center">
         <h1 className="text-4xl font-black mb-4">Case Study Not Found</h1>
-        <Link to="/case-studies" className="text-accent hover:underline">Return to Case Studies</Link>
+        <a href="#/case-studies" className="text-accent hover:underline">Return to Case Studies</a>
       </div>
     );
   }
@@ -23,10 +22,10 @@ export default function CaseStudy() {
       <Navbar />
 
       <main className="pt-40 pb-20 px-6 lg:px-12 max-w-4xl mx-auto">
-        <Link to="/case-studies" className="inline-flex items-center gap-2 text-secondary/60 hover:text-accent mb-12 transition-colors">
+        <a href="#/case-studies" className="inline-flex items-center gap-2 text-secondary/60 hover:text-accent mb-12 transition-colors">
           <ArrowLeft className="w-4 h-4" />
           <span className="uppercase tracking-widest text-xs font-bold">Back to case studies</span>
-        </Link>
+        </a>
 
         <header className="mb-16">
           <div className="flex flex-wrap items-center gap-4 mb-6">
@@ -89,12 +88,12 @@ export default function CaseStudy() {
         </div>
 
         <div className="mt-32 pt-16 border-t border-secondary/10 flex justify-center">
-          <Link to="/" className="flex items-center gap-3 text-accent font-bold uppercase tracking-widest text-sm group">
+          <a href="#" className="flex items-center gap-3 text-accent font-bold uppercase tracking-widest text-sm group">
             Start Your Digital Transformation
             <div className="w-10 h-10 rounded-full border border-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-all">
               <ArrowUpRight className="w-5 h-5" />
             </div>
-          </Link>
+          </a>
         </div>
       </main>
 

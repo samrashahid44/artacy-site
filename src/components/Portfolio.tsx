@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+
 import { ArrowUpRight } from "lucide-react";
 import { caseStudies } from "../data/caseStudiesData";
 
@@ -21,12 +21,12 @@ export default function Portfolio() {
             <p className="text-secondary/60 font-medium leading-relaxed">
               We don't hide behind "confidentiality." We show the numbers because the numbers don't lie.
             </p>
-            <Link to="/case-studies" className="flex items-center gap-3 text-accent font-bold uppercase tracking-widest text-xs group">
+            <a href="#/case-studies" className="flex items-center gap-3 text-accent font-bold uppercase tracking-widest text-xs group">
               View all case studies
               <div className="w-8 h-8 rounded-full border border-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-all">
                 <ArrowUpRight className="w-4 h-4" />
               </div>
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export default function Portfolio() {
                 transition={{ delay: idx * 0.1 }}
                 className={`${size} group cursor-pointer space-y-6`}
               >
-                <Link to={`/case-studies/${study.id}`} className="block h-full w-full space-y-6">
+                <a href={`#/case-studies/${study.id}`} className="block h-full w-full space-y-6">
                   <div className="relative overflow-hidden rounded-[2.5rem] aspect-[4/3] lg:aspect-auto lg:h-[500px] border border-secondary/10">
                     <img
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
@@ -68,7 +68,7 @@ export default function Portfolio() {
                     </div>
                     <span className="text-4xl font-black opacity-10">0{idx + 1}</span>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             );
           })}

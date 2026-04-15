@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
   return (
@@ -10,9 +10,9 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center"
         >
-          <Link to="/">
+          <a href="#">
             <img src="/logo.png" alt="Artacy Logo" className="h-32 w-auto object-contain" />
-          </Link>
+          </a>
         </motion.div>
         
         <div className="hidden md:flex items-center gap-x-12">

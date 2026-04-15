@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, TrendingUp } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         {/* Left Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -22,7 +22,7 @@ export default function Hero() {
           <div className="flex items-center gap-4">
             <div className="h-[1px] w-12 bg-primary" />
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary/60">
-              Real Growth. No Fluff.
+              Real Growth. No Fluff
             </span>
           </div>
 
@@ -37,7 +37,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-6 pt-6">
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05, rotate: -1 }}
               whileTap={{ scale: 0.95 }}
               className="bg-primary text-secondary px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs flex items-center gap-3 transition-transform"
@@ -45,7 +45,7 @@ export default function Hero() {
               Let's talk growth
               <ArrowRight className="w-4 h-4 text-accent" />
             </motion.button>
-            <motion.button 
+            <motion.button
               whileHover={{ x: 5 }}
               className="group flex items-center gap-3 text-primary font-bold uppercase tracking-widest text-xs"
             >
@@ -58,33 +58,43 @@ export default function Hero() {
         </motion.div>
 
         {/* Right Image Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 1.1, rotate: 5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="lg:col-span-5 relative"
         >
           <div className="relative z-10 perspective-1000">
-            <div className="curator-notch overflow-hidden aspect-[4/5] shadow-[40px_40px_0px_0px_rgba(97,64,81,1)] rotate-y-12">
-              <img 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                src="https://picsum.photos/seed/agency/800/1000" 
-                alt="High-end creative workspace"
-                referrerPolicy="no-referrer"
-              />
+            <div className="curator-notch bg-[#1a1216]/50 backdrop-blur-sm flex items-center justify-center overflow-hidden aspect-[4/5] shadow-[40px_40px_0px_0px_rgba(97,64,81,1)] border border-primary/10 rotate-y-12 relative group">
+              {/* Grid Background */}
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(247,243,235,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(247,243,235,0.03)_1px,transparent_1px)] bg-[size:20px_20px]" />
+              
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
+                className="relative z-10 text-accent group-hover:scale-110 transition-transform duration-700"
+              >
+                <motion.div
+                  animate={{ y: [0, -20, 0], scale: [1, 1.02, 1] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <TrendingUp className="w-48 h-48 drop-shadow-[0_0_30px_rgba(209,249,113,0.4)] md:w-64 md:h-64" strokeWidth={1} />
+                </motion.div>
+              </motion.div>
             </div>
           </div>
 
           {/* Floating Stat Card */}
-          <motion.div 
+          <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8 }}
             className="absolute -bottom-12 -left-12 bg-primary p-10 rounded-2xl shadow-2xl max-w-[240px] z-20"
           >
-            <div className="text-accent font-black text-6xl leading-none">10X</div>
+            <div className="text-accent font-black text-6xl leading-none">100%</div>
             <p className="text-secondary/60 text-[10px] uppercase tracking-widest mt-4 leading-relaxed font-bold">
-              Average ROAS for our ECOM clients in 2024. No guessing, just math.
+              Client retention. No guessing, just results.
             </p>
           </motion.div>
 

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+
 import { ArrowUpRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -30,7 +30,7 @@ export default function CaseStudies() {
               transition={{ delay: idx * 0.1 }}
               className="group cursor-pointer space-y-6"
             >
-              <Link to={`/case-studies/${study.id}`} className="block">
+              <a href={`#/case-studies/${study.id}`} className="block">
                 <div className="relative overflow-hidden rounded-[2.5rem] aspect-[4/3] border border-secondary/10">
                   <img
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
@@ -53,7 +53,7 @@ export default function CaseStudies() {
                   <h4 className="font-black text-2xl uppercase tracking-tighter mb-2">{study.title}</h4>
                   <p className="text-secondary/60 text-sm line-clamp-2">{study.overview}</p>
                 </div>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>

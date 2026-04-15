@@ -24,14 +24,12 @@ export default function Footer() {
             <div className="space-y-6">
               <div>
                 <p className="text-sm font-black uppercase tracking-tighter">UAE</p>
-                <p className="text-xs text-primary/60 mt-1">Dubai Design District, D3</p>
                 <a href="tel:+971567692421" className="text-xs text-accent font-bold mt-2 block hover:underline transition-all">
                   +971 56 769 2421
                 </a>
               </div>
               <div>
                 <p className="text-sm font-black uppercase tracking-tighter">Pakistan</p>
-                <p className="text-xs text-primary/60 mt-1">DHA Phase 6, Karachi</p>
                 <a href="tel:+923703364720" className="text-xs text-accent font-bold mt-2 block hover:underline transition-all">
                   +92 370 3364720
                 </a>
