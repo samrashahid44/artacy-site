@@ -3,33 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Clients from "./components/Clients";
-import About from "./components/About";
-import Services from "./components/Services";
-import Advantage from "./components/Advantage";
-import Portfolio from "./components/Portfolio";
-import Testimonials from "./components/Testimonials";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import CaseStudies from "./pages/CaseStudies";
+import CaseStudy from "./pages/CaseStudy";
 
 export default function App() {
   return (
-    <div className="min-h-screen relative">
-      <div className="grain-overlay" />
-      <Navbar />
-      <main>
-        <Hero />
-        <Clients />
-        <About />
-        <Services />
-        <Advantage />
-        <Portfolio />
-        <Testimonials />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-studies/:id" element={<CaseStudy />} />
+      </Routes>
+    </Router>
   );
 }

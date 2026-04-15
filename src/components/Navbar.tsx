@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -9,11 +10,13 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center"
         >
-          <img src="/logo.png" alt="Artacy Logo" className="h-32 w-auto object-contain" />
+          <Link to="/">
+            <img src="/logo.png" alt="Artacy Logo" className="h-32 w-auto object-contain" />
+          </Link>
         </motion.div>
         
         <div className="hidden md:flex items-center gap-x-12">
-          {["Services", "About", "Why Us", "Case Studies"].map((item, idx) => (
+          {["Services", "About", "Case Studies"].map((item, idx) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
@@ -28,15 +31,18 @@ export default function Navbar() {
           ))}
         </div>
         
-        <motion.button
+        <motion.a
+          href="https://calendly.com/artacy-net/artacy-free-consultation"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.05, rotate: 1 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-primary text-secondary px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl hover:shadow-accent/20 transition-all border border-primary"
+          className="bg-primary text-secondary px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl hover:shadow-accent/20 transition-all border border-primary inline-flex items-center"
         >
           Book a Consultation
-        </motion.button>
+        </motion.a>
       </div>
     </nav>
   );
