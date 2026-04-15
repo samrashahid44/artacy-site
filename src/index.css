@@ -4,10 +4,12 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-headline: "Space Grotesk", sans-serif;
-  
-  --color-primary: #0D1117; /* Midnight Obsidian */
+
+  --color-primary: #0D1117;
+  /* Midnight Obsidian */
   --color-secondary: #F5F5F0;
-  --color-accent: #8B6A7B; /* Soft Rose-Plum */
+  --color-accent: #8B6A7B;
+  /* Soft Rose-Plum */
   --color-surface: #FFFFFF;
   --color-muted: #71717A;
 
@@ -53,7 +55,7 @@
   }
 
   .bg-quill-gradient {
-    background: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0);
+    background: radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
     background-size: 32px 32px;
   }
 
@@ -104,7 +106,7 @@
   }
 
   .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee 20s linear infinite;
   }
 
   .animate-marquee-slow {
@@ -112,7 +114,12 @@
   }
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
