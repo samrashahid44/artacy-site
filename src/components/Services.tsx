@@ -1,41 +1,60 @@
 import { motion } from "motion/react";
-import { Sparkles, MousePointer2, Brush, BarChart3, Share2, BrainCircuit } from "lucide-react";
+import { Target, MousePointer2, Palette, Search, BrainCircuit, Globe } from "lucide-react";
 
 const services = [
   {
-    title: "The Blueprint",
-    description: "Finding your angle. We build a 90-day roadmap based on data, not 'vibes'.",
-    icon: Sparkles,
-    size: "col-span-12 lg:col-span-8",
+    title: "Digital Strategy",
+    description: "Data-driven marketing roadmaps that align every channel to one goal — revenue growth.",
+    deliverables: ["Market & competitor analysis", "90-day growth roadmap", "KPI frameworks & reporting"],
+    icon: Target,
+    size: "col-span-12 md:col-span-6 lg:col-span-8",
     color: "bg-primary text-secondary",
+    iconBg: "bg-accent text-primary",
   },
   {
-    title: "Paid Growth",
-    description: "Meta and Google ads that actually convert. We don't just spend budget; we buy customers.",
+    title: "Paid Advertising",
+    description: "High-performance Meta & Google Ads campaigns engineered for maximum ROAS.",
+    deliverables: ["Campaign strategy & setup", "Audience targeting & retargeting", "Conversion tracking & optimization"],
     icon: MousePointer2,
-    size: "col-span-12 lg:col-span-4",
-    color: "bg-accent text-secondary",
-  },
-  {
-    title: "Scroll-Stoppers",
-    description: "Visuals that make people stop. If it looks like an ad, people skip it. We make it look like a recommendation.",
-    icon: Brush,
-    size: "col-span-12 lg:col-span-4",
+    size: "col-span-12 md:col-span-6 lg:col-span-4",
     color: "bg-surface text-primary",
+    iconBg: "bg-primary text-secondary",
   },
   {
-    title: "Organic Search",
-    description: "Getting you found without paying for every click. Real SEO for real humans.",
-    icon: BarChart3,
-    size: "col-span-12 lg:col-span-4",
-    color: "bg-primary text-secondary",
-  },
-  {
-    title: "Efficiency",
-    description: "Replacing manual grunt work with smart systems. More growth, less overhead.",
+    title: "AI Automation",
+    description: "Intelligent systems that handle the repetitive work — so your team focuses on what matters.",
+    deliverables: ["AI chatbots & lead qualification", "Automated email & CRM workflows", "Smart reporting dashboards"],
     icon: BrainCircuit,
-    size: "col-span-12 lg:col-span-4",
+    size: "col-span-12 md:col-span-6 lg:col-span-4",
+    color: "bg-accent text-secondary",
+    iconBg: "bg-primary text-secondary",
+  },
+  {
+    title: "SEO & Organic Growth",
+    description: "Long-term search visibility that drives qualified traffic without paying per click.",
+    deliverables: ["Technical SEO audits & fixes", "Content strategy & creation", "Local SEO & Google Business"],
+    icon: Search,
+    size: "col-span-12 md:col-span-6 lg:col-span-4",
+    color: "bg-primary text-secondary",
+    iconBg: "bg-accent text-primary",
+  },
+  {
+    title: "Creative & Content",
+    description: "Scroll-stopping visuals and copy that build brand authority and drive engagement.",
+    deliverables: ["Brand identity & guidelines", "Social media content", "Ad creatives & video production"],
+    icon: Palette,
+    size: "col-span-12 md:col-span-6 lg:col-span-4",
     color: "bg-surface text-primary",
+    iconBg: "bg-primary text-secondary",
+  },
+  {
+    title: "Web Design & Development",
+    description: "Conversion-optimized websites that look premium and load fast on every device.",
+    deliverables: ["UI/UX design & prototyping", "Responsive development", "Landing pages & funnels"],
+    icon: Globe,
+    size: "col-span-12 md:col-span-6 lg:col-span-4",
+    color: "bg-primary text-secondary",
+    iconBg: "bg-accent text-primary",
   },
 ];
 
@@ -48,14 +67,14 @@ export default function Services() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8 text-center lg:text-left items-center lg:items-end">
           <div className="space-y-4">
-            <span className="text-primary/40 font-bold uppercase tracking-[0.4em] text-[10px]">Our Roadmap to Success</span>
+            <span className="text-primary/40 font-bold uppercase tracking-[0.4em] text-[10px]">What We Do</span>
             <h2 className="">
               Our <br />
-              <span className="outline-text">Playbook</span>
+              <span className="outline-text">Services</span>
             </h2>
           </div>
-          <p className="text-primary/60 max-w-sm font-medium leading-relaxed mx-auto lg:mx-0">
-            We don't offer 50 different services. We offer the 5 things that actually move the needle for your business.
+          <p className="text-primary/60 max-w-md font-medium leading-relaxed mx-auto lg:mx-0">
+            End-to-end digital growth — from strategy and creative to ads, SEO, and AI-powered automation. Everything your brand needs under one roof.
           </p>
         </div>
 
@@ -68,11 +87,11 @@ export default function Services() {
             show: {
               opacity: 1,
               transition: {
-                staggerChildren: 0.15
+                staggerChildren: 0.12
               }
             }
           }}
-          className="grid grid-cols-12 gap-6"
+          className="grid grid-cols-12 gap-5"
         >
           {services.map((service, idx) => (
             <motion.div
@@ -90,22 +109,30 @@ export default function Services() {
                   }
                 }
               }}
-              className={`${service.size} ${service.color} p-8 md:p-12 rounded-[2.5rem] group relative overflow-hidden flex flex-col justify-between min-h-[350px] md:min-h-[400px] border border-primary/5 shadow-2xl hover:shadow-accent/20 transition-all duration-500`}
+              className={`${service.size} ${service.color} p-8 md:p-10 rounded-[2rem] group relative overflow-hidden flex flex-col justify-between min-h-[340px] md:min-h-[380px] border border-primary/5 shadow-xl hover:shadow-accent/20 transition-all duration-500 hover:-translate-y-1`}
             >
               <div className="relative z-10">
-                <motion.div
-                  whileHover={{ rotate: 15, scale: 1.1 }}
-                  className={`w-20 h-20 mb-10 flex items-center justify-center rounded-[2rem] ${service.color.includes('primary') ? 'bg-accent text-primary' : 'bg-primary text-secondary'}`}
-                >
-                  <service.icon size={36} />
-                </motion.div>
-                <h3 className="text-4xl font-black mb-6 uppercase tracking-tighter leading-none">{service.title}</h3>
-                <p className="text-xl opacity-70 leading-relaxed font-medium max-w-[280px]">{service.description}</p>
-              </div>
-
-              {/* Decorative Number */}
-              <div className="absolute top-12 right-12 text-8xl font-black opacity-[0.03] select-none group-hover:opacity-[0.1] transition-opacity duration-700">
-                0{idx + 1}
+                <div className="flex items-start justify-between mb-8">
+                  <motion.div
+                    whileHover={{ rotate: 12, scale: 1.1 }}
+                    className={`w-16 h-16 flex items-center justify-center rounded-2xl ${service.iconBg}`}
+                  >
+                    <service.icon size={30} />
+                  </motion.div>
+                  <span className="text-7xl font-black opacity-[0.04] select-none font-headline leading-none group-hover:opacity-[0.1] transition-opacity duration-700">
+                    0{idx + 1}
+                  </span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-black mb-3 uppercase tracking-tighter leading-none">{service.title}</h3>
+                <p className="text-base opacity-60 leading-relaxed font-medium mb-6 max-w-sm">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.deliverables.map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-sm font-semibold opacity-50">
+                      <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${service.color.includes('bg-primary') ? 'bg-accent' : 'bg-primary'}`} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Hover Grain Effect */}

@@ -40,7 +40,7 @@ export default function Hero() {
             <h1 className="font-black text-primary uppercase mt-10 mb-10">
               We build <br />
               <span className="text-accent bg-primary px-4 inline-block -rotate-1 text-secondary">brands</span> <br />
-              people buy.
+              people buy
             </h1>
 
             <p className="text-xl text-primary/80 max-w-lg leading-relaxed font-medium">
@@ -84,7 +84,7 @@ export default function Hero() {
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <div className="relative z-10 perspective-1000">
-            <div className="curator-notch bg-primary/20 backdrop-blur-sm flex items-center justify-center overflow-hidden aspect-[4/5] shadow-[40px_40px_0px_0px_rgba(139,106,123,0.3)] border border-primary/10 rotate-y-12 relative group">
+              <div className="curator-notch bg-primary/20 backdrop-blur-sm flex items-center justify-center overflow-hidden aspect-[4/5] shadow-[40px_40px_0px_0px_rgba(139,106,123,0.3)] border border-primary/10 rotate-y-12 relative group">
                 {/* Grid Background */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(139,106,123,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(139,106,123,0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
 
