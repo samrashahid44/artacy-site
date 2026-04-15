@@ -21,32 +21,32 @@ export default function Clients() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-20 relative z-10">
         <div className="flex flex-col gap-4">
-           <div className="h-[2px] w-20 bg-accent" />
-           <p className="text-sm font-black uppercase tracking-[0.4em] text-primary">
-             Trusted by global brands
-           </p>
-           <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter max-w-lg">
-             We help local brands <span className="text-accent underline decoration-4">scale</span> globally.
-           </h2>
+          <div className="h-[2px] w-20 bg-accent" />
+          <p className="text-sm font-black uppercase tracking-[0.4em] text-primary">
+            Trusted by global brands
+          </p>
+          <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tighter max-w-lg">
+            We help local brands <span className="text-accent underline decoration-4">scale</span> globally.
+          </h2>
         </div>
       </div>
 
       <div className="relative z-10">
         <div className="flex gap-10 animate-marquee-slow whitespace-nowrap items-center">
           {[...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="group flex items-center justify-center shrink-0"
             >
-              <img 
-                src={encodeURI(logo.src)} 
-                alt={logo.name} 
+              <img
+                src={encodeURI(logo.src)}
+                alt={logo.name}
                 className="w-48 lg:w-60 h-32 lg:h-40 object-contain filter grayscale hover:grayscale-0 transition-all duration-700 border border-primary/20 rounded-2xl bg-surface p-4 shadow-sm hover:border-accent/40"
               />
             </div>
           ))}
         </div>
-        
+
         {/* Horizontal Fades */}
         <div className="absolute top-0 left-0 w-64 h-full bg-gradient-to-r from-secondary to-transparent z-20 pointer-events-none" />
         <div className="absolute top-0 right-0 w-64 h-full bg-gradient-to-l from-secondary to-transparent z-20 pointer-events-none" />
